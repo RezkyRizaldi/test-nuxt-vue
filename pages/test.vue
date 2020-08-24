@@ -2,6 +2,7 @@
   <div>
     <Jumbotron />
     <Card />
+    <!-- <App /> -->
     <Nuxt />
     <footer class="footer py-3 bg-dark">
       <div class="container-fluid">

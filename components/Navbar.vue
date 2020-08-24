@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-navbar class="bg-navbar" toggleable="lg" type="dark" variant="transparent">
+    <b-navbar class="bg-navbar" toggleable="lg" type="dark" variant="transparent" v-b-scrollspy:nav-scroller>
       <b-navbar-toggle class="nav-toggle" target="sidebar-1"></b-navbar-toggle>
       <b-button v-b-toggle.sidebar-1 class="mr-2 sidenav-toogle" variant="success">Toggle Sidebar</b-button>
       <b-navbar-brand href="#">NavBar</b-navbar-brand>
@@ -9,7 +9,7 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item active href="#">Link</b-nav-item>
+          <b-nav-item active href="#card" @click="scrollIntoView">Card</b-nav-item>
           <b-nav-item href="#">Link</b-nav-item>
           <b-nav-item href="#">Link</b-nav-item>
           <b-nav-item href="#">Link</b-nav-item>
@@ -18,8 +18,10 @@
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
           <b-nav-form>
-            <b-form-input size="sm" class="mr-sm-2" placeholder="Search"></b-form-input>
-            <b-button size="sm" class="my-2 my-sm-0" type="submit" variant="success">Search</b-button>
+            <b-form-input size="sm" class="mr-sm-2" placeholder="Cari"></b-form-input>
+            <b-button size="sm" class="my-2 my-sm-0" type="submit" variant="success">
+              <font-awesome-icon :icon="['fas', 'search']" class="icon alt" style="font-size: 22px';"/>
+            </b-button>
           </b-nav-form>
 
           <b-nav-item-dropdown text="Dropdown" right>
