@@ -1,29 +1,45 @@
 <template>
   <div>
-    <b-jumbotron class="bg-jumbotron text-center d-flex d-flex-r justify-content-center align-items-center" header="Test Jumbotron" lead="Belajar BootstrapVue" text-variant="light">
-    <b-button v-b-tooltip.hover.top="tooltipText" variant="primary" href="#">{{ text }}
-      <font-awesome-icon :icon="['fas', 'eye']" class="icon alt ml-1" style="font-size: 22px';"/>
-    </b-button>
+    <b-jumbotron class="bg-jumbotron text-center d-flex d-flex-r justify-content-center align-items-center" header="Test Jumbotron" lead="Belajar Nuxt.js dengan BootstrapVue2" text-variant="light">
+      <b-button v-b-toggle.collapse-2 v-b-popover.hover.blur.left="popover" title="Latihan" variant="primary" @click="makeToast('primary')" href="#" class="mb-3">{{ text }}
+        <font-awesome-icon :icon="['fas', 'eye']" class="icon alt ml-1" style="font-size: 22px';"/>
+      </b-button>
+
+      <!-- Element to collapse -->
+      <b-collapse id="collapse-2">
+        <b-card text-variant="dark">Hello, World!</b-card>
+      </b-collapse>
     </b-jumbotron>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'App',
-    computed: {
-    tooltipText: function() {
-      // put your logic here to change the tooltip text
-        return `
-          View More
-        `
-      }
-    },
+    // computed: {
+    // tooltipText: function() {
+    //     put your logic here to change the tooltip text
+    //     return `
+    //       View More
+    //     `
+    //   }
+    // },
     data() {
       return {
         text: `
           View More
+        `,
+        popover: `
+          Ini adalah file latihan Nuxt.js menggunakan BootstrapVue 2
         `
+      }
+    },
+    methods: {
+      makeToast(variant = null) {
+        this.$bvToast.toast('Toast body content', {
+          title: `Variant ${variant || 'default'}`,
+          variant: variant,
+          solid: true
+        })
       }
     }
   }

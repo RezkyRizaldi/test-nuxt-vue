@@ -48,8 +48,8 @@ export default {
     head: {
         title: process.env.npm_package_name || 'Rezky',
         script: [
-            // { src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js', type: 'text/javascript' },
-            // { src: '/src/main.js', type: 'text/javascript' }
+            { src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js', type: 'text/javascript' },
+            { src: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE', type: 'text/javascript' }
         ],
         meta: [
             { charset: 'utf-8' },

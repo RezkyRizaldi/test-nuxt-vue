@@ -1,16 +1,29 @@
 <template>
-  <div>
+  <div style="background: #777;">
+    <Modal />
     <Jumbotron />
     <Card />
-    <!-- <App /> -->
+    <Carousel />
+    <CarouselCard />
+    <Form />
     <Nuxt />
     <footer class="footer py-3 bg-dark">
       <div class="container-fluid">
-        <p class="text-light px-2">Copyright &copy; | All Right Reserved by Muhamad Rezky Rizaldi</p>
+        <p class="text-light px-2">Copyright &copy; {{ date }} | All Right Reserved by Muhamad Rezky Rizaldi</p>
       </div>
     </footer>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      date: (new Date()).getFullYear()
+    }
+  }
+}
+</script>
 
 <style crossorigin="anonymous">
 html {
