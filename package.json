@@ -40,8 +40,8 @@
         "node-sass": "^7.0.0",
         "sass-loader": "^9.0.3",
         "stylus": "^0.54.8",
-        "stylus-loader": "^3.0.2",
-        "vue-jest": "^3.0.4",
+        "stylus-loader": "^7.1.0",
+        "vue-jest": "^4.0.1",
         "webpack": "^5.75.0"
     },
     "optionalDependencies": {
