@@ -42,7 +42,7 @@
         "stylus": "^0.54.8",
         "stylus-loader": "^7.1.0",
         "vue-jest": "^4.0.1",
-        "webpack": "^5.75.0"
+        "webpack": "^5.76.0"
     },
     "optionalDependencies": {
         "fsevents": "2.1.2"
